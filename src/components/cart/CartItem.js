@@ -4,17 +4,22 @@ export default function CartItem({
   item,
   removeFromCart,
   removeQtyCart,
-  addToCart,
+  addToCart,totalQty,totalPrice
 })
-
 {
+
  
+    
+
+    
   return (
-    <div className="cartItem">
-      <tbody>
-      <tr>
+    
+   <React.Fragment>
+
+   
+ <tr>
         <td className="cartId">{item.id}</td>
-        <td className="cartTitle">{item.title.slice(0, 20)}</td>
+        <td className="cartTitle">{item.title.slice(0, 10)}</td>
         <td className="cartImg">
           <img src={item.image} alt={item.title} />
         </td>
@@ -33,6 +38,7 @@ export default function CartItem({
           </button>
         </td>
         <td className="cartPrice">$ {item.price * item.qty}</td>
+       <td>
         <button
           type="button"
           className="removeFromCart"
@@ -41,10 +47,23 @@ export default function CartItem({
         >
           Remove
         </button>
+        </td>
       </tr>
-      </tbody>
+
      
-    </div>
-  );
-}
+      {
+        <div>Total :{totalQty} {totalPrice}</div> 
+            }
+    
+     
+       
+     
+   
+      </React.Fragment>);
+      
+      
+  
+  }
+ 
+
  

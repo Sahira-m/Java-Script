@@ -1,10 +1,11 @@
-.cartTable
+.cartList
 {
-    border-color: rgb(4, 4, 4);
+    border-color: rgb(173, 49, 49);
     border: 5px;
     width: 60%;
     height: 60%;
     margin-left: 10%;
+    background-color: aquamarine;
 }
 .cartTable thead
 {
@@ -20,4 +21,9 @@ tbody,tr
 {
     
     margin-left: 10%;
+}
+table
+{
+    column-width: 20%;
+    row-gap: 10%;
 }

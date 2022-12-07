@@ -19,16 +19,13 @@ export default function ProductList({addToCart})
     fetchItems();
   }, []);
   return(
-  <div className="product">
-    {
-    items.slice(0,12).map((item)=> {
-          // return <ProductItem key={item.id} product={item} addToCart={addToCart} cartList={cartList}/>;
-          return <ProductItem key={item.id} product={item} addToCart={addToCart} />;
-        }
-
+  <div className="container">
+    { items.slice(0,12).map((item)=> 
+          // <ProductItem key={item.id} product={item} addToCart={addToCart} cartList={cartList}/>
+        
+          (<ProductItem key={item.id} product={item} addToCart={addToCart} />)
     )
-    
-  }
+}
   </div>
   );
 }

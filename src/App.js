@@ -9,6 +9,7 @@ function App() {
 
 const [cartList ,setCartList]=useState([]);
 // addToCart function
+
 function addToCart  (products)  {
   const updatedCartArray = [...cartList];
   const updatedProduct = { ...products, qty: 1 };

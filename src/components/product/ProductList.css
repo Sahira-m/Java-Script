@@ -1,9 +1,6 @@
- .product
+ .container
 {
-    /*display: grid;
-    border: 1px solid rgb(188, 160, 160);
-    width: 20%;
-    grid-template-columns:250px 250px 250px;
-   
-    grid-template-rows: 50px 50px 50px; */
+    display: grid;
+    grid-template-columns:auto auto auto;
+column-gap: 1px;
 }

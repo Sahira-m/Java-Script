@@ -1,13 +1,24 @@
 import React from "react";
-import CartItem from "./CartItem"
+import CartItem from "./CartItem";
 import "./Cart.css";
-
 export default function CartList({
   cartList,
   removeFromCart,
   removeQtyCart,
   addToCart,
 }) {
+  console.log("cl",cartList);
+  let totalQty=0,totalPrice=0;
+   function total()
+   {
+     cartList.map((item)=>
+    {
+       return (totalQty+=item.qty ,totalPrice+=item.price*item.qty);
+     })
+   }
+   total();
+
+  
   console.log("cartitem",cartList);
   return( <div className="cartList">
         
@@ -29,7 +40,8 @@ export default function CartList({
         <CartItem
           key={item.id}
           item={item}
-          
+          totalQty={totalQty}
+          totalPrice={totalPrice}
           addToCart={addToCart}
           removeFromCart={removeFromCart}
           removeQtyCart={removeQtyCart}
