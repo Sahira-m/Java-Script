@@ -4,7 +4,8 @@ import ProductItem from "./ProductItem";
 import "./ProductList.css";
 
 const url = "https://fakestoreapi.com/products";
-export default function ProductList()
+//export default function ProductList({addToCart, cartList})
+export default function ProductList({addToCart})
 {
   const [items, setItems] = useState([]);
 
@@ -21,24 +22,13 @@ export default function ProductList()
   <div className="product">
     {
     items.slice(0,12).map((item)=> {
-      return<ProductItem props={item} key={item.id}/>
-    }
+          // return <ProductItem key={item.id} product={item} addToCart={addToCart} cartList={cartList}/>;
+          return <ProductItem key={item.id} product={item} addToCart={addToCart} />;
+        }
+
     )
     
   }
   </div>
   );
-
-//    return <div>ProductList
-//     <div className="productList">
-//       {items.slice(0,9).map((item) =>{
-//   return <div key={item.id}> Name: {item.title} Price:{item.price}<img src={item.image} alt="images"></img>
-//   <button className='addToCartBtn' >ADD TO CART</button> </div>;
-// })}
-
-
-
-//     </div>
-//    </div>;
- 
 }

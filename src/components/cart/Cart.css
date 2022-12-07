@@ -1,0 +1,23 @@
+.cartTable
+{
+    border-color: rgb(4, 4, 4);
+    border: 5px;
+    width: 60%;
+    height: 60%;
+    margin-left: 10%;
+}
+.cartTable thead
+{
+    color: brown;
+    font-size: larger;
+}
+.cartTable tbody img
+{
+    width: 35px;
+    height: 35px;
+}
+tbody,tr
+{
+    
+    margin-left: 10%;
+}
