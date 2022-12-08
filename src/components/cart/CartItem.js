@@ -6,17 +6,10 @@ export default function CartItem({
   removeQtyCart,
   addToCart,totalQty,totalPrice
 })
-{
-
- 
-    
-
-    
+{ 
   return (
     
-   <React.Fragment>
-
-   
+   <React.Fragment> 
  <tr>
         <td className="cartId">{item.id}</td>
         <td className="cartTitle">{item.title.slice(0, 10)}</td>

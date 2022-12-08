@@ -7,7 +7,7 @@ export default function CartList({
   removeQtyCart,
   addToCart,
 }) {
-  console.log("cl",cartList);
+  //console.log("cl",cartList);
   let totalQty=0,totalPrice=0;
    function total()
    {
@@ -18,9 +18,8 @@ export default function CartList({
    }
    total();
 
-  
   console.log("cartitem",cartList);
-  return( <div className="cartList">
+  return( <div className="cart-list">
         
   <table className="cartTable">
     <thead>
@@ -30,7 +29,7 @@ export default function CartList({
       <th className="img">Image</th>
       <th className="qty">Quantity</th>
       <th className="price">Price</th>
-      <th className="removeBtn">Remove</th>
+      <th className="rmv-btn">Remove</th>
     </tr>
     </thead>
    
@@ -53,6 +52,3 @@ export default function CartList({
  </div> ) ;
   
     }
-     
-    
-    
