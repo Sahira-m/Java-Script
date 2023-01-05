@@ -1,0 +1,32 @@
+.cart-list
+{
+   /* border-color: rgb(173, 49, 49);
+    border: 5px;
+    
+    margin-left: 10%;
+    background-color: aquamarine;*/
+   /* display: grid;*/
+   /* grid-template-columns: repeat(6, 1fr); 
+    grid-column: span;*/
+}
+.cartTable 
+{
+    color: brown;
+    font-size: x-large;
+    
+    width:1000px;
+}
+ 
+    
+    
+
+.thead {
+    display:block;
+    float:left;
+    margin-left:25px;
+    position:relative;
+    min-height:35px;
+    max-width:125px;
+    padding-bottom:10px;
+    text-align:center;
+}

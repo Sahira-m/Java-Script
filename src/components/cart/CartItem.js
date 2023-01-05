@@ -1,5 +1,5 @@
 import React from "react";
-import "./Cart.css";
+import "./CartItem.css";
 export default function CartItem({
   item,
   removeFromCart,
@@ -7,18 +7,15 @@ export default function CartItem({
   addToCart,totalQty,totalPrice
 })
 { 
+ 
   return (
-    
-   <React.Fragment> 
- <tr>
-        <td className="cartId">{item.id}</td>
-        <td className="cartTitle">{item.title.slice(0, 10)}</td>
-        <td className="cartImg">
-          <img src={item.image} alt={item.title} />
-        </td>
-        <td className="cartQuantity">
-         
-          <button
+  <div className="tcontent">
+ 
+ <p>{item.id} </p>
+ <p>{item.title.slice(0, 20)}</p>
+  <img className="cartImg" src={item.image} alt={item.title} /> 
+  <div className="cartQuantity">
+         <button
             className="removeQuantityBtn"
             onClick={() => removeQtyCart(item.id)}
           >
@@ -29,9 +26,9 @@ export default function CartItem({
           <button className="cartQuantityBtn" onClick={() => addToCart(item)}>
             +
           </button>
-        </td>
-        <td className="cartPrice">$ {item.price * item.qty}</td>
-       <td>
+          
+        <div className="cartPrice">$ {item.price * item.qty}</div>
+       <div>
         <button
           type="button"
           className="removeFromCart"
@@ -40,22 +37,16 @@ export default function CartItem({
         >
           Remove
         </button>
-        </td>
-      </tr>
+        </div>
+      
 
      
-      {
-        <div>Total :{totalQty} {totalPrice}</div> 
-            }
-    
+ </div>
+ </div>
+
+ );   
      
-       
-     
-   
-      </React.Fragment>);
-      
-      
-  
+   //return(<div>Total :{totalQty} {totalPrice}</div>);
   }
  
 
